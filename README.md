@@ -4,19 +4,9 @@ A cyberpunk setup for **Windows Terminal + PowerShell 7**: two-line prompt, star
 
 Text stays readable in every mode: all effects spare the text and every theme uses a full 16-colour palette.
 
-![Start-up banner, git log, alerts and the two-line prompt](docs/screenshots/opening.png)
+![Start-up banner, git log, alerts and the two-line prompt in the default neon theme](docs/cinema/neon.gif)
 
-### Cinema modes
-
-`cinema --mode` switches the whole terminal look with a live preview. A few of the 13 modes:
-
-| | |
-|---|---|
-| **tv** · '80s television: RGB phosphor mask, rounded bezel, glass reflection<br>![tv](docs/screenshots/tv.png) | **vhs** · videotape: bleeding color, head-switching noise, worn tape<br>![vhs](docs/screenshots/vhs.png) |
-| **matrix** · green phosphor, digital code rain falling behind the text<br>![matrix](docs/screenshots/matrix.png) | **synthwave** · outrun: sunset sky, striped sun, magenta grid<br>![synthwave](docs/screenshots/synthwave.png) |
-| **noir** · '40s film noir: black & white, film scratches and dust<br>![noir](docs/screenshots/noir.png) | **terminator** · T-800 vision: red HUD with grid, scan bar and crosshair<br>![terminator](docs/screenshots/terminator.png) |
-
-Also: `neon`, `amber`, `star-wars`, `hologram`, `blade-runner`, `tron`, `mr-robot`.
+12 more looks, from Matrix rain to a Star Wars crawl, are in [Cinema themes](#cinema-themes).
 
 ## Requirements
 
@@ -63,6 +53,75 @@ Your preferences live in `~/.config/neon-noir/config.psd1` (only the keys you ch
 | `cinema` · `Ctrl+Alt+C` | cinema mode on/off |
 | `cinema --mode` | pick a mode with live preview |
 | `neon title "TEXT"` | change the banner title |
+
+## Cinema themes
+
+Each theme is a pixel shader plus a matching colour scheme. `cinema` turns the default one (**neon**) on and off; `cinema --mode` opens a menu that previews every theme live while you move through it. Every theme is tuned to keep text readable: scanlines, grain, vignetting and flicker spare the characters, and animated backgrounds get a dark halo behind the text.
+
+### neon
+Neon CRT · phosphor glow and scanlines. The default.
+
+![neon](docs/cinema/neon.gif)
+
+### tv
+'80s television · RGB phosphor mask, rounded bezel, glass reflection.
+
+![tv](docs/cinema/tv.gif)
+
+### matrix
+Green phosphor · digital code rain falling behind the text.
+
+![matrix](docs/cinema/matrix.gif)
+
+### amber
+'80s amber terminal · phosphor persistence and a rolling sync bar.
+
+![amber](docs/cinema/amber.gif)
+
+### star-wars
+Opening crawl · older output tilts away into the stars, gold text, nebula. The lower half stays flat for the work you are doing.
+
+![star-wars](docs/cinema/star-wars.gif)
+
+### hologram
+Hologram · projector beam, glowing edges, sliced glitches, interlacing.
+
+![hologram](docs/cinema/hologram.gif)
+
+### blade-runner
+Neo-noir · cinemascope bars, anamorphic flares, slanted rain, teal & orange.
+
+![blade-runner](docs/cinema/blade-runner.gif)
+
+### tron
+The Grid · scrolling neon floor in perspective, glowing text edges.
+
+![tron](docs/cinema/tron.gif)
+
+### vhs
+Videotape · bleeding color, head-switching noise, worn tape.
+
+![vhs](docs/cinema/vhs.gif)
+
+### mr-robot
+fsociety · high-contrast black & white, only red survives, digital glitch blocks.
+
+![mr-robot](docs/cinema/mr-robot.gif)
+
+### synthwave
+Outrun · sunset sky, striped sun, magenta grid, pink and cyan text.
+
+![synthwave](docs/cinema/synthwave.gif)
+
+### noir
+'40s film noir · black & white, film scratches and dust, flickering exposure.
+
+![noir](docs/cinema/noir.gif)
+
+### terminator
+T-800 vision · red HUD with grid, scan bar and crosshair.
+
+![terminator](docs/cinema/terminator.gif)
 
 ## Uninstall
 
