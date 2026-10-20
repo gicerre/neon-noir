@@ -15,7 +15,7 @@ Text stays readable in every mode: all effects spare the text and every theme us
 ## Install
 
 ```powershell
-git clone https://github.com/<you>/neon-noir.git
+git clone https://github.com/gicerre/neon-noir.git
 cd neon-noir
 .\install.ps1                     # add -WhatIf to see every change first
 ```
