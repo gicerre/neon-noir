@@ -77,3 +77,7 @@ Tests never touch real files: install and uninstall run end to end in a temporar
 | `terminal/` | Windows Terminal fragment merged into `settings.json` |
 | `claude/` | Claude Code status line |
 | `tools/NeonInstall.psm1` | merge / undo logic shared by the scripts and the tests |
+
+## License
+
+[MIT](LICENSE)
