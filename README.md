@@ -4,7 +4,19 @@ A cyberpunk setup for **Windows Terminal + PowerShell 7**: two-line prompt, star
 
 Text stays readable in every mode: all effects spare the text and every theme uses a full 16-colour palette.
 
-> Screenshots will be added once every cinema mode has been checked by eye.
+![Start-up banner, git log, alerts and the two-line prompt](docs/screenshots/opening.png)
+
+### Cinema modes
+
+`cinema --mode` switches the whole terminal look with a live preview. A few of the 13 modes:
+
+| | |
+|---|---|
+| **tv** · '80s television: RGB phosphor mask, rounded bezel, glass reflection<br>![tv](docs/screenshots/tv.png) | **vhs** · videotape: bleeding color, head-switching noise, worn tape<br>![vhs](docs/screenshots/vhs.png) |
+| **matrix** · green phosphor, digital code rain falling behind the text<br>![matrix](docs/screenshots/matrix.png) | **synthwave** · outrun: sunset sky, striped sun, magenta grid<br>![synthwave](docs/screenshots/synthwave.png) |
+| **noir** · '40s film noir: black & white, film scratches and dust<br>![noir](docs/screenshots/noir.png) | **terminator** · T-800 vision: red HUD with grid, scan bar and crosshair<br>![terminator](docs/screenshots/terminator.png) |
+
+Also: `neon`, `amber`, `star-wars`, `hologram`, `blade-runner`, `tron`, `mr-robot`.
 
 ## Requirements
 

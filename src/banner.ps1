@@ -186,6 +186,10 @@ function Show-NeonBanner {
     $lines.Add("  ${D}neon$X ${T}$(NeonText 'banner.f.neon')$X  $D·$X  ${D}Ctrl+R$X ${T}$(NeonText 'banner.f.history')$X  $D·$X  ${D}Ctrl+T$X ${T}$(NeonText 'banner.f.files')$X  $D·$X  ${D}z$X ${T}$(NeonText 'banner.f.jump')$X" +
         $(if (Get-Command coding -ErrorAction Ignore) { "  $D·$X  ${D}coding$X ${T}$(NeonText 'banner.f.projects')$X" }))
 
+    # [Console]::Write usa la codifica della console (spesso cp850, senza ▸): UTF-8 solo per il banner
+    $prevEncoding = [Console]::OutputEncoding
+    try {
+    [Console]::OutputEncoding = [Text.Encoding]::UTF8
     if ($animate) {
         # Riga per riga, poi "decodifica" breve del tagline: ~0,2 s in totale
         $logoCount = if ($logo.Width -le $width) { 7 } else { 2 }
@@ -210,4 +214,5 @@ function Show-NeonBanner {
     } else {
         [Console]::WriteLine(($lines -join "`n"))
     }
+    } finally { [Console]::OutputEncoding = $prevEncoding }
 }
