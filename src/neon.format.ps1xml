@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- NEON NOIR · vista degli errori (caricata da alerts.ps1 con Update-FormatData -PrependPath).
+     Cambia solo come vengono mostrati: l'oggetto ErrorRecord, $Error e i redirect restano invariati. -->
+<Configuration>
+  <ViewDefinitions>
+    <View>
+      <Name>NeonErrorRecord</Name>
+      <ViewSelectedBy>
+        <TypeName>System.Management.Automation.ErrorRecord</TypeName>
+      </ViewSelectedBy>
+      <OutOfBand />
+      <CustomControl>
+        <CustomEntries>
+          <CustomEntry>
+            <CustomItem>
+              <ExpressionBinding>
+                <ScriptBlock>
+                  if (Get-Command Format-NeonError -CommandType Function -ErrorAction Ignore) { Format-NeonError $_ }
+                  else { $_.Exception.Message }
+                </ScriptBlock>
+              </ExpressionBinding>
+            </CustomItem>
+          </CustomEntry>
+        </CustomEntries>
+      </CustomControl>
+    </View>
+  </ViewDefinitions>
+</Configuration>

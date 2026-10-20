@@ -1,0 +1,252 @@
+{
+  "$comment": "NEON NOIR - Windows Terminal fragment merged by install.ps1. {{ProjectsRoot}} is replaced at install time.",
+  "globals": {
+    "defaultProfile": "{6e0a1c11-7a3d-4f0e-9c1a-0e0e0de70001}",
+    "alwaysShowTabs": true,
+    "centerOnLaunch": true,
+    "firstWindowPreference": "defaultProfile",
+    "initialCols": 140,
+    "initialRows": 38,
+    "showTabsInTitlebar": true,
+    "snapToGridOnResize": true,
+    "tabWidthMode": "titleLength",
+    "theme": "Neon Noir",
+    "trimPaste": true,
+    "useAcrylicInTabRow": false,
+    "warning.confirmCloseAllTabs": true,
+    "warning.largePaste": true,
+    "warning.multiLinePaste": "automatic"
+  },
+  "defaults": {
+    "adjustIndistinguishableColors": "indexed",
+    "antialiasingMode": "cleartype",
+    "autoMarkPrompts": true,
+    "bellStyle": [
+      "window",
+      "taskbar"
+    ],
+    "colorScheme": "Neon Noir",
+    "cursorShape": "filledBox",
+    "font": {
+      "cellHeight": "1.25",
+      "face": "JetBrainsMono NFM, Cascadia Mono",
+      "size": 11,
+      "weight": "normal"
+    },
+    "historySize": 50000,
+    "intenseTextStyle": "bright",
+    "opacity": 95,
+    "padding": "14, 10, 14, 6",
+    "scrollbarState": "visible",
+    "showMarksOnScrollbar": true,
+    "snapOnInput": true,
+    "unfocusedAppearance": {
+      "opacity": 90
+    },
+    "useAcrylic": true
+  },
+  "profiles": [
+    {
+      "commandline": "pwsh.exe -NoLogo",
+      "guid": "{6e0a1c11-7a3d-4f0e-9c1a-0e0e0de70001}",
+      "hidden": false,
+      "icon": "",
+      "name": "PowerShell 7",
+      "tabColor": "#0B1A14"
+    },
+    {
+      "commandline": "pwsh.exe -NoLogo",
+      "guid": "{6e0a1c11-7a3d-4f0e-9c1a-0e0e0de70002}",
+      "hidden": false,
+      "icon": "",
+      "name": "Dev",
+      "startingDirectory": "{{ProjectsRoot}}",
+      "tabColor": "#12301F"
+    },
+    {
+      "commandline": "pwsh.exe -NoLogo",
+      "cursorColor": "#FF3860",
+      "elevate": true,
+      "guid": "{6e0a1c11-7a3d-4f0e-9c1a-0e0e0de70003}",
+      "hidden": false,
+      "icon": "",
+      "name": "Admin",
+      "tabColor": "#3A0D18"
+    },
+    {
+      "commandline": "pwsh.exe -NoLogo -NoProfile",
+      "guid": "{6e0a1c11-7a3d-4f0e-9c1a-0e0e0de70004}",
+      "hidden": false,
+      "icon": "",
+      "name": "Clean",
+      "tabColor": "#1A1F1D"
+    }
+  ],
+  "schemes": [
+    {
+      "background": "#07090A",
+      "black": "#12301F",
+      "blue": "#4AA3FF",
+      "brightBlack": "#55665F",
+      "brightBlue": "#7DBEFF",
+      "brightCyan": "#6FFFF4",
+      "brightGreen": "#6BFFA8",
+      "brightPurple": "#C7A2FF",
+      "brightRed": "#FF6F8C",
+      "brightWhite": "#EAFFF2",
+      "brightYellow": "#FFF08A",
+      "cursorColor": "#39FF88",
+      "cyan": "#18D6D0",
+      "foreground": "#BDF2CF",
+      "green": "#39FF88",
+      "name": "Neon Noir",
+      "purple": "#A472FF",
+      "red": "#FF3860",
+      "selectionBackground": "#1E4A37",
+      "white": "#B4C4BD",
+      "yellow": "#E6D25A"
+    }
+  ],
+  "themes": [
+    {
+      "name": "Neon Noir",
+      "tab": {
+        "background": "terminalBackground",
+        "iconStyle": "default",
+        "showCloseButton": "hover",
+        "unfocusedBackground": "#0A0E0DFF"
+      },
+      "tabRow": {
+        "background": "#050707FF",
+        "unfocusedBackground": "#050707FF"
+      },
+      "window": {
+        "applicationTheme": "dark",
+        "experimental.rainbowFrame": false,
+        "frame": "#1E4A37FF",
+        "unfocusedFrame": "#101614FF",
+        "useMica": false
+      }
+    }
+  ],
+  "actions": [
+    {
+      "command": {
+        "action": "splitPane",
+        "split": "right",
+        "splitMode": "duplicate"
+      },
+      "id": "Neon.SplitRight"
+    },
+    {
+      "command": {
+        "action": "splitPane",
+        "split": "down",
+        "splitMode": "duplicate"
+      },
+      "id": "Neon.SplitDown"
+    },
+    {
+      "command": "togglePaneZoom",
+      "id": "Neon.ZoomPane"
+    },
+    {
+      "command": {
+        "action": "scrollToMark",
+        "direction": "previous"
+      },
+      "id": "Neon.PrevPrompt"
+    },
+    {
+      "command": {
+        "action": "scrollToMark",
+        "direction": "next"
+      },
+      "id": "Neon.NextPrompt"
+    },
+    {
+      "command": {
+        "action": "clearBuffer",
+        "clear": "all"
+      },
+      "id": "Neon.ClearBuffer"
+    },
+    {
+      "command": {
+        "action": "exportBuffer"
+      },
+      "id": "Neon.ExportBuffer"
+    },
+    {
+      "command": "toggleFocusMode",
+      "id": "Neon.FocusMode"
+    },
+    {
+      "command": {
+        "action": "newTab",
+        "profile": "Dev"
+      },
+      "id": "Neon.NewDev"
+    },
+    {
+      "command": {
+        "action": "newTab",
+        "profile": "Admin"
+      },
+      "id": "Neon.NewAdmin"
+    },
+    {
+      "command": {
+        "action": "newTab",
+        "profile": "Clean"
+      },
+      "id": "Neon.NewClean"
+    }
+  ],
+  "keybindings": [
+    {
+      "id": "Neon.NewClean",
+      "keys": "ctrl+alt+n"
+    },
+    {
+      "id": "Neon.SplitDown",
+      "keys": "alt+shift+down"
+    },
+    {
+      "id": "Neon.ClearBuffer",
+      "keys": "ctrl+shift+k"
+    },
+    {
+      "id": "Neon.ZoomPane",
+      "keys": "ctrl+shift+z"
+    },
+    {
+      "id": "Neon.SplitRight",
+      "keys": "alt+shift+right"
+    },
+    {
+      "id": "Neon.PrevPrompt",
+      "keys": "ctrl+alt+up"
+    },
+    {
+      "id": "Neon.NextPrompt",
+      "keys": "ctrl+alt+down"
+    },
+    {
+      "id": "Neon.ExportBuffer",
+      "keys": "ctrl+shift+s"
+    },
+    {
+      "id": "Neon.FocusMode",
+      "keys": "ctrl+shift+enter"
+    },
+    {
+      "id": "Neon.NewDev",
+      "keys": "ctrl+alt+d"
+    },
+    {
+      "id": "Neon.NewAdmin",
+      "keys": "ctrl+alt+a"
+    }
+  ]
+}
